@@ -2,7 +2,8 @@ name: Build and Deploy Documentation
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 env:
@@ -15,6 +16,7 @@ jobs:
     permissions:
       id-token: write
       contents: write
+      pages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
