@@ -8,7 +8,7 @@
 </procedure>
 
 If user has not confirmed its account and trying to sign in,
-then user will see text 
+then user will see text like:
 "You have to confirm you account. Go to your email box and find confirmation link"
 
 ### Register Request Type
