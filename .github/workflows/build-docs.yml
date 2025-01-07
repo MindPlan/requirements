@@ -43,8 +43,10 @@ jobs:
           mkdir -p site
           unzip -o artifacts/${{ steps.define-ids.outputs.artifact }} -d site
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: site
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        with:
-          branch: gh-pages
-          folder: site
