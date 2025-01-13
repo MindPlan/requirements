@@ -8,4 +8,5 @@
 
     <toc-element topic="starter-topic.md"/>
     <toc-element topic="authorization.md"/>
+    <toc-element topic="authorization-via-google.md"/>
 </instance-profile>
