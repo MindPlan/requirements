@@ -147,3 +147,32 @@ Backend should take accessToken from HTTP header <code>Authorization</code>, dec
     </code-block>
   </tab>
 </tabs>
+
+## Logout
+The user must be able to log out
+
+### Req/Res types
+
+<tabs>
+  <tab title="Request">
+    <code-block lang="http">
+      GET /api/user/logout HTTP/1.1
+      Host: example.com
+      Authorization: Bearer abc123xyz1-access-jwt...
+    </code-block>
+  </tab>
+
+  <tab title="Response">
+    <code-block lang="http">
+      HTTP/1.1 200 Success
+      Date: Wed, 08 Jan 2025 12:00:00 GMT
+    </code-block>
+  </tab>
+</tabs>
+
+The frontend sends HTTP GET request to the backend. The backend decodes access token and finds the user by `user_id` (PK) and sets `refresh_token` field to null.
+The null value means, that now user is not logged in its account.
+
+<warning>
+  The refresh_token field must contain ONLY HASHED refresh token or null!
+</warning>
